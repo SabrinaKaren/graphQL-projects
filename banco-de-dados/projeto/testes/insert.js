@@ -7,15 +7,15 @@ const db = require('../config/db.js');
 
 db('perfis').insert(novoPerfil)
     .then(res => console.log(res))
-    .catch(err => console.log(err.sqlMessage))
+    .catch(err => console.error(err.sqlMessage))
     .finally(() => db.destroy()); */
 
-const perfilSU = {
+/* const perfilSU = {
     nome: 'root' + Math.random(),
     rotulo: 'Super Usuário'
 };
 
 db.insert(perfilSU).into('perfis')
     .then(res => console.log(res))
-    .catch(err => console.log(err.sqlMessage))
-    .finally(() => db.destroy());
+    .catch(err => console.error(err.sqlMessage))
+    .finally(() => db.destroy()); */
